@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_player_players",
+  "info": {
+    "displayName": "Player"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "position": {
+      "type": "string"
+    },
+    "team": {
+      "type": "component",
+      "component": "teams.teams",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
