@@ -15,32 +15,24 @@ const articles = [
     summary: "Mahomes throws 3 TDs in playoff victory over Bills",
     content: "The Kansas City Chiefs secured their spot...",
     sport: "football",
-    // teams: ["Chiefs", "Bills"],
-    // players: ["Patrick Mahomes", "Josh Allen"],
   },
   {
     title: "Warriors Secure Win Against Suns",
     summary: "Curry shines with 9 threes and 35 points",
     content: "Golden State dominated from the start...",
     sport: "basketball",
-    // teams: ["Warriors", "Suns"],
-    // players: ["Stephen Curry", "Devin Booker"],
   },
   {
     title: "Eagles Crush Giants in Divisional Round",
     summary: "Hurts accounts for 4 TDs in dominant performance",
     content: "Philadelphia cruised past New York with a stellar offense...",
     sport: "football",
-    // teams: ["Eagles", "Giants"],
-    // players: ["Jalen Hurts", "Saquon Barkley"],
   },
   {
     title: "Yankees Top Red Sox in Classic Rivalry Game",
     summary: "Judge belts 2 homers in a slugfest at Yankee Stadium",
     content: "A thrilling night in the Bronx saw New York take control...",
     sport: "soccer",
-    // teams: ["Yankees", "Red Sox"],
-    // players: ["Aaron Judge", "Rafael Devers"],
   },
 ];
 
@@ -48,7 +40,7 @@ const articles = [
 async function publishArticle(article: any) {
   try {
     const response = await axios.post(
-      "http://localhost:1337/api/articles", // Replace with your API endpoint
+      "http://localhost:1337/api/articles",
       {
         data: {
           ...article,
@@ -86,8 +78,3 @@ articles.forEach((article, index) => {
     publishArticle(article);
   }, index * 30000); // 30s between each
 });
-
-// Publish articles every 30 seconds to test automation
-// articles.forEach((article, index) => {
-//   setTimeout(() => publishArticle(article), index * 30000);
-// });
