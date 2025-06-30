@@ -22,10 +22,10 @@
       "unique": true
     },
     "content": {
-      "type": "richtext"
+      "type": "blocks"
     },
     "summary": {
-      "type": "richtext"
+      "type": "string"
     },
     "sport": {
       "type": "enumeration",

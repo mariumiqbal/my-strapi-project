@@ -7,31 +7,126 @@ const articles = [
     title: "Lakers Defeat Celtics 118-102 in Thrilling Matchup",
     summary:
       "LeBron James leads Lakers to victory with 32 points and 8 assists",
-    content: "In a commanding performance at Crypto.com Arena...",
+    content: [
+      {
+        type: "paragraph",
+        children: [
+          {
+            type: "text",
+            text: "LeBron James leads Lakers to victory with 32 points and 8 assists",
+          },
+        ],
+      },
+      {
+        type: "paragraph",
+        children: [
+          {
+            type: "text",
+            text: "",
+          },
+        ],
+      },
+    ],
     sport: "basketball",
   },
   {
     title: "tatics Triumph Over Giants in NFC Championship",
     summary: "Mahomes throws 3 TDs in playoff victory over Bills",
-    content: "The Kansas City Chiefs secured their spot...",
+    content: [
+      {
+        type: "paragraph",
+        children: [
+          {
+            type: "text",
+            text: "The Kansas City Chiefs secured their spot...",
+          },
+        ],
+      },
+      {
+        type: "paragraph",
+        children: [
+          {
+            type: "text",
+            text: "",
+          },
+        ],
+      },
+    ],
     sport: "football",
   },
   {
     title: "Warriors Secure Win Against Suns",
     summary: "Curry shines with 9 threes and 35 points",
-    content: "Golden State dominated from the start...",
+    content: [
+      {
+        type: "paragraph",
+        children: [
+          {
+            type: "text",
+            text: "Golden State dominated from the start...",
+          },
+        ],
+      },
+      {
+        type: "paragraph",
+        children: [
+          {
+            type: "text",
+            text: "",
+          },
+        ],
+      },
+    ],
     sport: "basketball",
   },
   {
     title: "Eagles Crush Giants in Divisional Round",
     summary: "Hurts accounts for 4 TDs in dominant performance",
-    content: "Philadelphia cruised past New York with a stellar offense...",
+    content: [
+      {
+        type: "paragraph",
+        children: [
+          {
+            type: "text",
+            text: "Philadelphia cruised past New York with a stellar offense...",
+          },
+        ],
+      },
+      {
+        type: "paragraph",
+        children: [
+          {
+            type: "text",
+            text: "",
+          },
+        ],
+      },
+    ],
     sport: "football",
   },
   {
     title: "Yankees Top Red Sox in Classic Rivalry Game",
     summary: "Judge belts 2 homers in a slugfest at Yankee Stadium",
-    content: "A thrilling night in the Bronx saw New York take control...",
+    content: [
+      {
+        type: "paragraph",
+        children: [
+          {
+            type: "text",
+            text: "A thrilling night in the Bronx saw New York take control...",
+          },
+        ],
+      },
+      {
+        type: "paragraph",
+        children: [
+          {
+            type: "text",
+            text: "",
+          },
+        ],
+      },
+    ],
     sport: "soccer",
   },
 ];

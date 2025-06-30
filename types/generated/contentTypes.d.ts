@@ -426,7 +426,7 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
       ['draft', 'review', 'published']
     >;
     authorType: Schema.Attribute.Enumeration<['AI', 'Human']>;
-    content: Schema.Attribute.RichText;
+    content: Schema.Attribute.Blocks;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -440,7 +440,7 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     sport: Schema.Attribute.Enumeration<['basketball', 'football', 'soccer']> &
       Schema.Attribute.Required;
-    summary: Schema.Attribute.RichText;
+    summary: Schema.Attribute.String;
     title: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.Unique;
