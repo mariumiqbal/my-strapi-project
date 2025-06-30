@@ -437,10 +437,12 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
       'api::article.article'
     > &
       Schema.Attribute.Private;
+    players: Schema.Attribute.Relation<'manyToMany', 'api::player.player'>;
     publishedAt: Schema.Attribute.DateTime;
     sport: Schema.Attribute.Enumeration<['basketball', 'football', 'soccer']> &
       Schema.Attribute.Required;
     summary: Schema.Attribute.String;
+    teams: Schema.Attribute.Relation<'manyToMany', 'api::team.team'>;
     title: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.Unique;
@@ -461,6 +463,7 @@ export interface ApiPlayerPlayer extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    articles: Schema.Attribute.Relation<'manyToMany', 'api::article.article'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -474,6 +477,7 @@ export interface ApiPlayerPlayer extends Struct.CollectionTypeSchema {
     position: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     team: Schema.Attribute.Component<'teams.teams', true>;
+    teams: Schema.Attribute.Relation<'oneToMany', 'api::team.team'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -491,6 +495,7 @@ export interface ApiTeamTeam extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    articles: Schema.Attribute.Relation<'manyToMany', 'api::article.article'>;
     city: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -503,6 +508,7 @@ export interface ApiTeamTeam extends Struct.CollectionTypeSchema {
       true
     >;
     name: Schema.Attribute.String;
+    player: Schema.Attribute.Relation<'manyToOne', 'api::player.player'>;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

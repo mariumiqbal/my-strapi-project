@@ -26,6 +26,18 @@
         "videos",
         "audios"
       ]
+    },
+    "articles": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::article.article",
+      "mappedBy": "teams"
+    },
+    "player": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::player.player",
+      "inversedBy": "teams"
     }
   }
 }

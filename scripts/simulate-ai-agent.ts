@@ -53,6 +53,8 @@ const articles = [
       },
     ],
     sport: "football",
+    teams: [1, 3],
+    players: [1, 3],
   },
   {
     title: "Warriors Secure Win Against Suns",

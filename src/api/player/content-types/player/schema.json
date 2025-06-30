@@ -21,6 +21,18 @@
       "type": "component",
       "component": "teams.teams",
       "repeatable": true
+    },
+    "articles": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::article.article",
+      "mappedBy": "players"
+    },
+    "teams": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::team.team",
+      "mappedBy": "player"
     }
   }
 }

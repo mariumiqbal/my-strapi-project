@@ -30,18 +30,41 @@
     "sport": {
       "type": "enumeration",
       "required": true,
-      "enum": ["basketball", "football", "soccer"]
+      "enum": [
+        "basketball",
+        "football",
+        "soccer"
+      ]
     },
     "gameDate": {
       "type": "datetime"
     },
     "article_status": {
       "type": "enumeration",
-      "enum": ["draft", "review", "published"]
+      "enum": [
+        "draft",
+        "review",
+        "published"
+      ]
     },
     "authorType": {
       "type": "enumeration",
-      "enum": ["AI", "Human"]
+      "enum": [
+        "AI",
+        "Human"
+      ]
+    },
+    "players": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::player.player",
+      "inversedBy": "articles"
+    },
+    "teams": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::team.team",
+      "inversedBy": "articles"
     }
   }
 }
